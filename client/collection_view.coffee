@@ -21,7 +21,7 @@ get_collection_view_fields = -> get_fields(get_collection().find({}, limit: 50).
 
 Template.collection_view.events
   "click a.home": (e) ->
-    Meteor.go("/admin/")
+    Meteor.Router.to("/admin/")
 
   "click a.sort": (e) ->
       e.preventDefault()
